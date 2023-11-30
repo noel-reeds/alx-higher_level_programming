@@ -1,4 +1,6 @@
 #!/usr/bin/python3
-for i in range(0, 99, 2):
-    print(i)
-    print(", ")
+for num in range(100):
+    if num != 99:
+        print('{}'.format(num), end=', ')
+    else:
+        print(num)
