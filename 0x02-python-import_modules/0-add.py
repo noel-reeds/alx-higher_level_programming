@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-def add(a, b):
-    res = a + b
-    return res
+from add_0 import add
+a = 1
+b = 2
+add(a, b)
+print('{} + {} + {}'.format(a, b, add(a, b)))
 
 
 if __name__ == "__main__":
