@@ -13,3 +13,6 @@ while m < res:
     if res > 2:
         print("{}: {}".format(m, sys.argv[m]))
     m = m + 1
+
+if __name__ == "__main__":
+    import sys
