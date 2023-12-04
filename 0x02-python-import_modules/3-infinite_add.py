@@ -5,7 +5,12 @@ res = 0
 if args == 1:
     print(res)
 else:
-    pass
+    m = 1
+    while m < args:
+        if args > 1:
+            res += int(sys.argv[m])
+            m = m + 1
+    print(res)
 
 
 if __name__ == "__main__":
