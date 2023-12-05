@@ -2,8 +2,16 @@
 def max_integer(my_list=[]):
     if my_list == "":
         return None
-    for m in range(len(my_list) - 1):
-        if my_list[m] > my_list[m+1]:
-            return mylist[m]
+    res = (len(my_list)) -1
+    m = 0
+    if my_list[m] < my_list[m+1]:
+        num = my_list[m+1]
+    else:
+        num = my_list[m]
+    while m < res:
+        if num < my_list[m+1]:
+            num = my_list[m+1]
         else:
-            return my_list[m+1]
+            num = num
+        m = m + 1
+    return num
