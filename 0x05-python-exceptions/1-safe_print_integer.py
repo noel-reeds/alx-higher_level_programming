@@ -8,4 +8,4 @@ def safe_print_integer(value):
             return False
         finally:
             if value is None:
-                return None
+                return False
