@@ -6,6 +6,5 @@ def safe_print_integer(value):
             return True
         except Exception:
             return False
-        finally:
-            if value is None:
-                return False
+    else:
+        return False
