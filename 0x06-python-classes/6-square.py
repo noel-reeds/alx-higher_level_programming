@@ -70,6 +70,9 @@ class Square:
     def position(self):
         """
         Retrieves the coordinates of an obj. square.
+
+        Returns:
+            Returns the cordinates in the position tuple.
         """
         return self.__position
 
@@ -77,6 +80,12 @@ class Square:
     def position(self, value):
         """
         Modifies the coordinates of an obj. square.
+
+        Args:
+            value(tuple): cordinates of the obj. square.
+
+        Returns:
+            Returns a position in the square grid.
         """
         if type(value) != tuple:
             raise TypeError("position must be a tuple
