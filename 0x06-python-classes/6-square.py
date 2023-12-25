@@ -32,14 +32,19 @@ class Square:
         Area is computed by size * size or size-squared
         """
         return self.__size ** 2
-
+    
+    """
+    Retrieves the size of the obj. square
+    """
     @property
     def size(self):
         """
         Retrieves the size of the obj. square
         """
         return self.__size
-
+    """
+    Sets or modifies the the size of the obj. with a new value.
+    """
     @size.setter
     def size(self, value):
         """
