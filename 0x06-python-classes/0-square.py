@@ -1,6 +1,13 @@
 #!/usr/bin/python3
 class Square:
-    '''Defines a square'''
+    """This class defines a square"""
     def __init__(self):
-        '''Initializes a square'''
+        """This module defines an instance of class Square.
+
+        Args:
+            The module takes the obj. as argument as required.
+
+        Returns:
+            bool: True for success, False otherwise.
+        """
         pass
