@@ -18,9 +18,7 @@ class Square:
             size(int): The size of the obj. square.
         """
         self.__size = size
-        if size is not int:
+        if type(size) != int:
             print("size must be an integer")
         elif size < 0:
             print("size must be >= 0")
-        else:
-            self.__size = size
