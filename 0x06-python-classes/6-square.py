@@ -16,7 +16,7 @@ class Square:
 
         Args:
             size(int): The size of the obj. square.
-	    position(tuple): 
+            position(tuple): cordinates of obj. square
         """
         if type(size) != int:
             raise TypeError("size must be an integer")
@@ -79,7 +79,7 @@ class Square:
         Modifies the coordinates of an obj. square.
         """
         if type(value) != tuple:
-            raise TypeError("position must be a tuple 
+            raise TypeError("position must be a tuple
                             of 2 positive integers")
         elif len(value) != 2:
             raise TypeError("position must be a tuple
