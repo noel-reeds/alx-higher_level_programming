@@ -31,20 +31,16 @@ class Square:
         This is the area method of the class Square.
         Area is computed by size * size or size-squared
         """
-        return self.__size ** 2
-    
-    """
-    Retrieves the size of the obj. square
-    """
+        area = self.__size ** 2  #: Area computation..size-squared.
+        return area
+
     @property
     def size(self):
         """
         Retrieves the size of the obj. square
         """
         return self.__size
-    """
-    Sets or modifies the the size of the obj. with a new value.
-    """
+
     @size.setter
     def size(self, value):
         """
@@ -68,38 +64,8 @@ class Square:
             num = self.__size
             for m in range(num):
                 for n in range(num):
-                    print("#", end="")
+                    if position[1] > 0:
+                        print("_", end="")
+                    else:
+                        print("#", end="")
                 print()
-
-    @property
-    def position(self):
-        """
-        Retrieves the coordinates of an obj. square.
-
-        Returns:
-            Returns the cordinates in the position tuple.
-        """
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        """
-        Modifies the coordinates of an obj. square.
-
-        Args:
-            value(tuple): cordinates of the obj. square.
-
-        Returns:
-            Returns a position in the square grid.
-        """
-        if type(value) != tuple:
-            raise TypeError("position must be a tuple
-                            of 2 positive integers")
-        elif len(value) != 2:
-            raise TypeError("position must be a tuple
-                            of 2 positive integers")
-        elif type(value[0]) and type(value[1]) != int:
-            raise TypeError("position must be a tuple
-                            of 2 positive integers")
-        else:
-            self.__position = value
