@@ -69,3 +69,43 @@ class Square:
                     else:
                         print("#", end="")
                 print()
+
+    """
+    This is a property getter method, retrieves the set cordinates of the
+    obj. square.
+    """
+    @property
+    def position(self):
+        """
+        Retrieves the coordinates of an obj. square.
+
+        Returns:
+            Returns the cordinates in the position tuple.
+        """
+        return self.__position
+
+    """
+    This is a property setter method, sets the coordinates of the obj.
+    square.
+    """
+    @position.setter
+    def position(self, value):
+        """
+        Modifies the coordinates of an obj. square.
+
+        Args:
+            value(tuple): cordinates of the obj. square.
+        Returns:
+            Tuple: Returns a position(0, 0) tuple in the square grid.
+        """
+        if type(value) != tuple:
+            raise TypeError("position must be a tuple \
+                            of 2 positive integers")
+        elif len(value) != 2:
+            raise TypeError("position must be a tuple \
+                            of 2 positive integers")
+        elif type(value[0]) and type(value[1]) != int:
+            raise TypeError("position must be a tuple \
+                            of 2 positive integers")
+        else:
+            self.__position = value
