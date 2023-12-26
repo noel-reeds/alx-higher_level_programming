@@ -44,6 +44,7 @@ class Square:
     """
     @size.setter
     def size(self, value):
+
         if type(value) != int:
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -57,14 +58,13 @@ class Square:
     """
     def my_print(self):
 
-        self.__position = position
         if self.__size == 0:
             print()
         else:
             num = self.__size
             for m in range(num):
                 for n in range(num):
-                    if position[1] > 0:
+                    if self.__position[1] > 0:
                         print("_", end="")
                     else:
                         print("#", end="")
