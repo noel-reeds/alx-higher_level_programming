@@ -63,8 +63,9 @@ class Square:
         else:
             num = self.__size
             for m in range(num):
-                if self.__position[1] > 0:
-                    print(" ", end="")
+                if self.__position[0] > 0:
+                    for i in range(self.__position[0]):
+                        print(" ", end="")
                 for n in range(num):
                     print("#", end="")
                 print()
