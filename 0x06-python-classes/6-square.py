@@ -21,11 +21,20 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
+        """
+        position(tuple): cordinates of obj. square
+        """
+        if type(position) is not tuple:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif len(position) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif type(position[0]) is not int or type(position[1]) is not int:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
             self.__position = position
 
     """
     This is the area method of the class Square.
-    Area is computed by size * size or size-squared
     """
     def area(self):
 
@@ -44,7 +53,6 @@ class Square:
     """
     @size.setter
     def size(self, value):
-
         if type(value) != int:
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -74,12 +82,10 @@ class Square:
                 print()
 
     """
-    This is a property getter method, retrieves the
-    set cordinates of the obj. square.
+    This retrieves the set cordinates of the obj. square.
     """
     @property
     def position(self):
-
         return self.__position
 
     """
@@ -88,15 +94,11 @@ class Square:
     """
     @position.setter
     def position(self, value):
-
-        if type(value) != tuple:
-            raise TypeError("position must be a tuple \
-                            of 2 positive integers")
+        if type(value) is not tuple:
+            raise TypeError("position must be a tuple of 2 positive integers")
         elif len(value) != 2:
-            raise TypeError("position must be a tuple \
-                            of 2 positive integers")
-        elif type(value[0]) and type(value[1]) != int:
-            raise TypeError("position must be a tuple \
-                            of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif type(value[0]) is not int or type(value[1]) is not int:
+            raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
