@@ -90,9 +90,3 @@ class SinglyLinkedList:
             while temp is not None:
                 print(str(temp.data))
                 temp = temp.next_node
-    """
-    Return a custom readable str
-    """
-    def __str__(self):
-        display_linkedlist()
-        return ""
