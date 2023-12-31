@@ -88,9 +88,5 @@ class SinglyLinkedList:
         if self.head is not None:
             temp = self.head
             while temp is not None:
-                print(temp.data)
+                print(str(temp.data))
                 temp = temp.next_node
-
-    def __str__(self):
-        self.display_linkedlist()
-        return ""
