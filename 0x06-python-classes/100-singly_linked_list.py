@@ -85,8 +85,17 @@ class SinglyLinkedList:
     Prints a singly linked list to stdout
     """
     def display_linkedlist(self):
-        if self.head is not None:
-            temp = self.head
-            while temp is not None:
-                print(str(temp.data))
-                temp = temp.next_node
+        result = ""
+        temp = self.head
+        while temp is not None:
+            result += str(temp.data)
+            if temp.next_node is not None:
+                result += "\n"
+            temp = temp.next_node
+        return result
+
+    """
+    str method to output a readable format
+    """
+    def __str__(self):
+        return self.display_linkedlist()
