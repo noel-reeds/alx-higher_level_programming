@@ -6,4 +6,7 @@ A rectangle is a four-sided shape with opp. sides equal..
 
 
 class Rectangle:
+    """
+    This is an empty class
+    """
     pass
