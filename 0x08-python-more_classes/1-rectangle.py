@@ -7,9 +7,9 @@ A rectangle is a four-sided shape with opp. sides equal..
 
 class Rectangle:
     """An init method to initialize attributes.."""
-    def __init__(self, width = 0, height = 0):
+    def __init__(self, width=0, height=0):
         self.width = width
-        self.height = height	
+        self.height = height
     """retrives the private attribute, width.."""
     @property
     def width(self):
