@@ -15,6 +15,7 @@ class Rectangle:
         self.width = width
         self.height = height
         type(self).number_of_instances += 1
+        type(self).print_symbol = Rectangle.print_symbol
     """retrives the private attribute, width.."""
     @property
     def width(self):
@@ -58,7 +59,7 @@ class Rectangle:
         rectangle = ""
         for m in range(self.__height):
             for n in range(self.__width):
-                rectangle += Rectangle.print_symbol
+                rectangle += self.print_symbol
             if m < self.__height - 1:
                 rectangle += "\n"
         return rectangle
