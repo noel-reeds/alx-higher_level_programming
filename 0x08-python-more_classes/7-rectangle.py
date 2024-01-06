@@ -59,7 +59,7 @@ class Rectangle:
         rectangle = ""
         for m in range(self.__height):
             for n in range(self.__width):
-                rectangle += self.print_symbol
+                rectangle += str(self.print_symbol)
             if m < self.__height - 1:
                 rectangle += "\n"
         return rectangle
