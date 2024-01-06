@@ -52,7 +52,7 @@ class Rectangle:
         else:
             perimeter = 2 * (self.__height + self.__width)
             return perimeter
-    """displays a rectangle of '#'.."""
+    """displays a rectangle of diff. symbols.."""
     def display_rectangle(self):
         if self.__height == 0 or self.__width == 0:
             return ""
