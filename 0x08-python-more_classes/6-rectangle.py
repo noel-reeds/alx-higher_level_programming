@@ -6,7 +6,9 @@ A rectangle is a four-sided shape with opp. sides equal..
 
 
 class Rectangle:
+    """public cls atrribute for num of instances.."""
     number_of_instances = 0
+
     """An init method to initialize attributes.."""
     def __init__(self, width=0, height=0):
         self.width = width
