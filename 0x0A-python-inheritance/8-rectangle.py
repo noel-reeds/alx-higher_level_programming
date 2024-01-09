@@ -17,13 +17,11 @@ class BaseGeometry:
         self.name = name
 
 
-"""Inherits from BaseGeometry"""
 class Rectangle(BaseGeometry):
     """Rep. a rectangle which inherits from BaseGeometry"""
 
     def __init__(self, width, height):
         """dunder init method, initializes width and height
-        
         Args:
             width(int): width of retcangle
             height(int): height of rectangle
