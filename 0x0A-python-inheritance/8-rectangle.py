@@ -14,7 +14,6 @@ class BaseGeometry:
         elif value <= 0:
             raise ValueError('{} must be greater than 0'.format(name))
         self.value = value
-        self.name = name
 
 
 class Rectangle(BaseGeometry):
