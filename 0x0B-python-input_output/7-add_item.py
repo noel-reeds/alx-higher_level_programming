@@ -9,5 +9,10 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 if __name__ == "__main__":
     """Adds args to a Python object(list)"""
+    try:
+        python_list = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        python_list = []
     python_obj = sys.argv[1:]
-    save_to_json_file(python_obj, "add_item.json")
+    new = python_list + python_obj
+    save_to_json_file(new, "add_item.json")
