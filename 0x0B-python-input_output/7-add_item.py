@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script, adds args to a Python list, saves them in a file"""
+"""Script adds args to a Python list, saves them in a file"""
 
 import json
 import sys
@@ -8,11 +8,12 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
 if __name__ == "__main__":
-    """Adds args to a Python object(list)"""
     try:
-        python_list = load_from_json_file("add_item.json")
+        # checks for a list in the json file
+        current = load_from_json_file("add_item.json")
     except FileNotFoundError:
-        python_list = []
-    python_obj = sys.argv[1:]
-    new = python_list + python_obj
+        # if try clause is False, initialize an empty list..
+        current = []
+    args = sys.argv[1:]
+    new = current + args
     save_to_json_file(new, "add_item.json")
