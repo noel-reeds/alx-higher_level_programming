@@ -15,6 +15,34 @@
 	>>> add_integer(-1, -2)
 	-3
 
+	>>> add_integer(5)
+	103
+
+	>>> add_integer()
+	Traceback (most recent call last):
+		...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+	>>> add_integer('r', 'str')
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add_integer('r', 12)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add_integer(float('inf'), 67)
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(12, [])
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
 	>>> add_integer(7, None)
 	Traceback (most recent call last):
 		...
@@ -25,6 +53,17 @@
 		...
 	TypeError: a must be an integer
 
+	>>> add_integer(None, None)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add_integer(float('NaN'))
+	Traceback (most recent call last):
+		...
+	ValueError: cannot convert float NaN to integer
+
 	>>> add_integer(int(10.3), 5)
 	15
+
 	"""
