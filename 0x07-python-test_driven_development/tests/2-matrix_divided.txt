@@ -1,0 +1,17 @@
+	"""
+	Functions takes in a matrix and div, divides elements of a matrix.
+	Returns a new matrix
+
+	Here are some tests..
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+	>>> matrix_divided(matrix, 'div')
+	Traceback (most recent call last):
+		...
+	TypeError: div must be a number
+
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+		...
+	ZeroDivisionError: division by zero
