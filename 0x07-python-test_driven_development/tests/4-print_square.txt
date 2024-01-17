@@ -21,5 +21,6 @@
 	>>> print_square(-5)
 	Traceback (most recent call last):
 		...
-	TypeError: size must be an integer
+	ValueError: size must be >= 0
+
 	"""
