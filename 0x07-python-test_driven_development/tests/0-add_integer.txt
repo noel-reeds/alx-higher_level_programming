@@ -1,7 +1,8 @@
-add_integer = __import__('0-add_integer').add_integer
 
 	"""
 	A function that adds two integers.
+	
+	>>> add_integer = __import__('0-add_integer').add_integer
 
 	>>> add_integer(6, 7)
 	13
