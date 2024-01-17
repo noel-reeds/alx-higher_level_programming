@@ -7,7 +7,7 @@ Module prints a square with the character "#"
 def print_square(size):
     """
     Prints a square of symbol, '#' to the stdout..
-    
+
     Args:
         size(int):
 
