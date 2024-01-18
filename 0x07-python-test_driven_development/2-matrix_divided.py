@@ -13,9 +13,18 @@ def matrix_divided(matrix, div):
     Returns:
         A new matrix.
     """
+    if div == 0:
+        raise ZeroDivisionError('division by zero')
+    if len(matrix) < 2:
+        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+    for m in range(len(matrix)):
+        for n in range(len(matrix[m])):
+            if not isinstance(matrix[m][n], (int, float)):
+                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     new_matrix = []
-    for rows in matrix:
-        for cols in rows:
-            new_matrix.append('{:.2f}'.format(cols/div))
-    
+    for rows in range(len(matrix)):
+        new_matrix.append([])
+        for cols in range(len(matrix[rows])):
+            new_matrix[rows].append(float('{:.2f}'.format(matrix[rows][cols]/div)))
+
     return new_matrix
