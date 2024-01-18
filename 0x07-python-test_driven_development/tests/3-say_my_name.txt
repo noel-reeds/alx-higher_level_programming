@@ -9,17 +9,15 @@
 	>>> say_my_name('Joe', 67)
 	Traceback (most recent call last):
 		...
-	TypeError: first_name must be a string
+	TypeError: last_name must be a string
 
 	>>> say_my_name(88, 'Doe')
 	Traceback (most recent call last):
 		...
-	TypeError: last_name must be a string
+	TypeError: first_name must be a string
 
 	>>> say_my_name('Joe')
-	Traceback (most recent call last):
-		...
-	TypeError: say_my_name() missing 1 required keyword argument: 'last_name'
+	My name is Joe
 
 	>>> say_my_name(last_name='Doe')
 	Traceback (most recent call last):
