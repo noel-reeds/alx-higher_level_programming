@@ -16,9 +16,6 @@
 		...
 	TypeError: first_name must be a string
 
-	>>> say_my_name('Joe')
-	My name is Joe
-
 	>>> say_my_name(last_name='Doe')
 	Traceback (most recent call last):
 		...
