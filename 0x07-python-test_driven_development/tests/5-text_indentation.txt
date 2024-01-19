@@ -23,3 +23,8 @@
 
 	>>> text_indentation("some random str")
 	some random str
+
+	>>> text_indentation("some? random str")
+	some?
+	<BLANKLINE>
+	random str

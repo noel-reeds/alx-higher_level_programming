@@ -18,11 +18,14 @@ def text_indentation(text):
         raise TypeError('text must be a string')
     chars = '.?:'
 
-    iter_index = 0
     if '.' not in text and '?' not in text and ':' not in text:  # check..
         print(text)
+    iter_index = 0
+    max_index = len(text) - 1
     for index, value in enumerate(text):
         if value in chars:
             print(text[iter_index:index + 1])
             print()
             iter_index = index + 2
+            if iter_index < max_index and text[max_index] not in chars:
+                print(text[iter_index:max_index+1])
