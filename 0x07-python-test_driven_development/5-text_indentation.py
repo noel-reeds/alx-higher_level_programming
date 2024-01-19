@@ -19,9 +19,10 @@ def text_indentation(text):
     chars = '.?:'
 
     iter_index = 0
+    if '.' not in text and '?' not in text and ':' not in text:  # check..
+        print(text)
     for index, value in enumerate(text):
-        for char in chars:
-            if value == char:
-                print(text[iter_index:index + 1])
-                print()
-                iter_index = index + 2
+        if value in chars:
+            print(text[iter_index:index + 1])
+            print()
+            iter_index = index + 2
