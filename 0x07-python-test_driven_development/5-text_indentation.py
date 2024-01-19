@@ -31,11 +31,11 @@ def text_indentation(text):
                 iter_index = index + 2
                 if '.' not in text[iter_index:] and ':' not in \
                         text[iter_index:] and '?' not in text[iter_index:]:
-                    print(text[iter_index:len(text)])
+                    print(text[iter_index:len(text)], end="")
                     break
             if iter_index < max_index and text[index + 1] is not " ":
                 iter_index = index + 1
                 if '.' not in text[iter_index:] and ':' not in \
                         text[iter_index:] and '?' not in text[iter_index:]:
-                    print(text[iter_index:len(text)])
+                    print(text[iter_index:len(text)], end="")
                     break
