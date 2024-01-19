@@ -16,6 +16,12 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError('text must be a string')
-    chars = ".?:"
-    if  chars[0] in text or chars[1] in text or chars[2] in text:
-        print()
+    chars = '.?:'
+
+    iter_index = 0
+    for index, value in enumerate(text):
+        for char in chars:
+            if value == char:
+                print(text[iter_index:index + 1])
+                print()
+                iter_index = index + 2
