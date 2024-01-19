@@ -28,3 +28,8 @@
 	some?
 	<BLANKLINE>
 	random str
+	>>> text_indentation("Hello.Ready?")
+	Hello.
+	<BLANKLINE>
+	Ready?
+	<BLANKLINE>

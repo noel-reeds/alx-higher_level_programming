@@ -26,6 +26,11 @@ def text_indentation(text):
         if value in chars:
             print(text[iter_index:index + 1])
             print()
-            iter_index = index + 2
-            if iter_index < max_index and text[max_index] not in chars:
-                print(text[iter_index:max_index+1])
+            if index < max_index and text[index + 1] == " ":
+                iter_index = index + 2
+                if iter_index < max_index:
+                    if '.' not in text[iter_index:] and ':' not in \
+                            text[iter_index:] and '?' not in text[iter_index:]:
+                        print(text[iter_index:len(text)])
+                        break
+            iter_index = index + 1
