@@ -19,7 +19,7 @@ def text_indentation(text):
     chars = '.?:'
 
     if '.' not in text and '?' not in text and ':' not in text:  # check..
-        print(text)
+        print(text, end="")
     iter_index = 0
     max_index = len(text) - 1
     for index, value in enumerate(text):
