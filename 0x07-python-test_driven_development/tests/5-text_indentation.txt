@@ -33,3 +33,8 @@
 	<BLANKLINE>
 	Ready?
 	<BLANKLINE>
+
+	>>> text_indentation("Hello.Ready")
+	Hello.
+	<BLANKLINE>
+	Ready
