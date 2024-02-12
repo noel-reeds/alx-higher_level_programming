@@ -75,7 +75,15 @@ class Rectangle(Base):
 
     """prints a rectangle of '#' to stdout"""
     def display(self):
+        for var2 in range(self.__y):
+            print()
         for var in range(self.__height):
+            for var3 in range(self.__x):
+                print(" ", end="")
             for var1 in range(self.__width):
                 print('#', end="")
             print()
+
+    """overrides the __str__ method"""
+    def __str__(self):
+        pass
