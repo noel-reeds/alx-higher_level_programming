@@ -38,3 +38,12 @@
 	Hello.
 	<BLANKLINE>
 	Ready
+
+	>>> text_indentation("Hello. Kunjani? Welcome to SA:    Joe")
+	Hello.
+	<BLANKLINE>
+	Kunjani?
+	<BLANKLINE>
+	Welcome to SA:
+	<BLANKLINE>
+	Joe
