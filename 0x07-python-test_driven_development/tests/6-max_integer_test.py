@@ -3,17 +3,20 @@
 Tests '6-max_integer' module
 """
 import unittest
-from 6-max_integer import max_integer
+max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
     """
     Define tests methods, each to start with 'test'
     """
-    def test_empty(self):
-        """Returns None for an empty list"""
-        self.assertIsNone(list)
-
     def test_values(self):
-        """Checks for values of list to be int"""
-        self.assertIsInstance(list[i], int)
+        """Returns None for an empty list.."""
+        self.assertEqual(max_integer(list=[5, 4, 6]), 6, "should be 6")
+        self.assertEqual(max_integer(list=[100, 5000, 2]), 5000)
+        self.assertEqual(max_integer(list=[]), None)
+        self.assertEqual(max_integer(list=[6]), 6)
+
+    def test_exceptions(self):
+        """Check for exceptions raised"""
+        pass
