@@ -1,0 +1,45 @@
+	A function to multiply two matrices.
+	
+	>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+	
+	>>> matrix_A = [[1,2,3],[4,5,6],[7,8,9],[10,11,12]]
+	>>> matrix_B = [[1,2],[1,2],[3,4]]
+
+	>>> matrix_mul(matrix_A, matrix_B)
+	[[12, 18], [27, 42], [42, 66], [57, 90]]
+	
+	>>> matrix_A = [1,2,3]
+	>>> matrix_B = [[1,2],[1,2],[3,4]]
+
+	>>> matrix_mul(matrix_A, matrix_B)
+	Traceback (most recent call last):
+		...
+	TypeError: m_a must be a list of lists
+	
+	>>> matrix_A = [[1,2,3],[4,5,6],[7,8,9],[10,11,12]]
+	>>> matrix_B = [[1,2],[1,2]]
+	>>> matrix_mul(matrix_A, matrix_B)
+	Traceback (most recent call last):
+		...
+	TypeError: m_a and m_b can't be multiplied
+	
+	>>> matrix_A = [[],[]]
+	>>> matrix_B = [[1,2],[1,2]]
+	>>> matrix_mul(matrix_A, matrix_B)
+	Traceback (most recent call last):
+		...
+	ValueError: m_a can't be empty
+	
+	>>> matrix_A = [[1,2,3],[4,5,6],[7,8,9],[10,11,'str']]
+	>>> matrix_B = [[1,2],[1,2]]
+	>>> matrix_mul(matrix_A, matrix_B)
+	Traceback (most recent call last):
+		...
+	TypeError: m_a should contain only integers or floats
+
+	>>> matrix_A = [[1,2,3],[4,5,6],[7,8,9],[10,11]]
+	>>> matrix_B = [[1,2],[1,2],[3,4]]
+	>>> matrix_mul(matrix_A, matrix_B)
+	Traceback (most recent call last):
+		...
+	TypeError: each row of m_a must be of the same size
