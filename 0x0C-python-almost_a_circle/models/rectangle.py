@@ -87,7 +87,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """overrides the __str__ method"""
-        return self.display()
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
+{self.__width}/{self.__height}"
 
     def update(self, *args):
         """includes non-keyword args"""
