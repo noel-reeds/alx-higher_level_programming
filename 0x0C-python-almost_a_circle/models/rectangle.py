@@ -91,5 +91,8 @@ class Rectangle(Base):
 {self.__width}/{self.__height}"
 
     def update(self, *args):
-        """includes non-keyword args"""
-        pass
+        """assigns an argument to each attribute"""
+        attrs = ["id", "width", "height", "x", "y"]
+        object_dict = self.__dict__.copy()
+        for index, value in enumerate(args):
+            setattr(self, attrs[index], args[index])
