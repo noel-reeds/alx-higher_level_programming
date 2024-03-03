@@ -48,5 +48,5 @@ class Base:
         if json_string == None or json_string == ""
             return "[]"
         else:
-            list_dictionaries = json.loads(json_string)
-            return list_dictionaries
+            python_obj = json.loads(json_string)
+            return python_obj
