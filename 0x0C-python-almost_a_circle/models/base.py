@@ -26,17 +26,19 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """writes JSON string to a file"""
+        class_name = "Rectangle" or "Square"
+        filename = f"{class_name}.json"
         if list_objs:
             list_dicts = []
             for obj in list_objs:
                 obj_dictionary = obj.to_dictionary()
                 list_dicts.append(obj_dictionary)
             json_str = cls.to_json_string(list_dicts)
-            with open("Rectangle.json", mode="w", encoding="utf-8") as MyFile:
+            with open(filename, mode="w", encoding="utf-8") as MyFile:
                 MyFile.write(json_str)
         else:
             list_objs = []
             obj_dictionary = list_objs.to_dictionary()
             json_str = to_json_string(obj_dictionary)
-            with open("Rectangle.json", mode="w", encoding="utf-8") as MyFile:
+            with open(filename, mode="w", encoding="utf-8") as MyFile:
                 MyFile.write(json_str)
