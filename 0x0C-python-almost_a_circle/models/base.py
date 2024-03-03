@@ -14,6 +14,7 @@ class Base:
             self.__class__.__nb_objects += 1
             self.id = self.__class__.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """dictionary rep of an instance to JSON string"""
         if list_dictionaries:
