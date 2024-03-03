@@ -9,8 +9,21 @@ class Square(Rectangle):
         """Init method"""
         super().__init__(size, size, x, y, id)
         self.size = size
-        self.__width = self.__height = self.size
 
     def __str__(self):
         """custom str method"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
+
+    @property
+    def size(self):
+        """retrieves the size attrs"""
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """sets the size attrs"""
+        if type(value) is not int:
+            raise TypeError('width must be an integer')
+        elif value <= 0:
+            raise ValueError('width must be > 0')
+        self.__size = value
