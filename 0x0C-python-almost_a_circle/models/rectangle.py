@@ -99,3 +99,11 @@ class Rectangle(Base):
         for key in kwargs.keys():
             if key in attrs:
                 setattr(self, key, kwargs[key])
+
+    def to_dictionary(self):
+        """instance to dictionary"""
+        return {
+                "id": self.id, "width": self.__width,
+                "height": self.__height, "x": self.__x,
+                "y": self.__y
+                }
