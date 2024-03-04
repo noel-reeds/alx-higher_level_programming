@@ -20,7 +20,7 @@ class Base:
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         if type(list_dictionaries) != list or\
-                not all (type(var) == dict for var in list_dictionaries):
+                not all(type(var) == dict for var in list_dictionaries):
             raise TypeError("mst_dictionaries must be a list of dictionaries")
         return json.dumps(list_dictionaries)
 
