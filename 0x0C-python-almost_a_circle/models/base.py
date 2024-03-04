@@ -18,7 +18,8 @@ class Base:
     def to_json_string(list_dictionaries):
         """dictionary rep of an instance to JSON string"""
         if list_dictionaries:
-            json_str = json.dumps(list_dictionaries)
+            for dict_item in list_dictionaries:
+                json_str = json.dumps(dict_item)
             return json_str
         else:
             return "[]"
@@ -47,8 +48,8 @@ class Base:
         if json_string is None or json_string == "":
             return "[]"
         else:
-            python_obj = json.loads(json_string)
-            return python_obj
+            python_objs = json.loads(json_string)
+            return python_objs
 
     @classmethod
     def create(cls, **dictionary):
@@ -58,6 +59,16 @@ class Base:
         dummy_obj.update(**dictionary)
         return dummy_obj
 
+"""
+    @classmethod
     def load_from_file(cls):
-        """returns a list of instances"""
-        pass
+        returns a list of instances
+        filename = f"{cls.__name__}.json"
+        if filename is None:
+            return "[]"
+        else:
+            python_objs = cls.from_json_string(filename)
+            for kwargs in python_objs:
+                obj = cls.create(kwargs)
+            return obj
+"""
