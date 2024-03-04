@@ -59,6 +59,7 @@ class Base:
         dummy_obj.update(**dictionary)
         return dummy_obj
 
+
 """
     @classmethod
     def load_from_file(cls):
