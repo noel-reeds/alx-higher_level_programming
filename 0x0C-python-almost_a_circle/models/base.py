@@ -56,7 +56,7 @@ class Base:
         """returns an instance with all attributes"""
         from models.rectangle import Rectangle
         from models.square import Square
-        dummy_obj = Square(10, 7, 2, 8)
+        dummy_obj = Square(10)
         dummy_obj.update(**dictionary)
         return dummy_obj
 
