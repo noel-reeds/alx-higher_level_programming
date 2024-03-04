@@ -19,8 +19,8 @@ class Base:
         """dictionary rep of an instance to JSON string"""
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
-        if not isinstance(list_dictionaries, list) or\
-                not all(isinstance(var, dict) for var in list_dictionaries):
+        if (type(list_dictionaries) != list or
+                not all(type(var) == dict for var in list_dictionaries)):
             raise TypeError("list_dictionaries must be a list of dictionaries")
         return json.dumps(list_dictionaries)
 
