@@ -22,8 +22,7 @@ class Base:
         if type(list_dictionaries) != list or\
                 not all (type(var) == dict for var in list_dictionaries):
             raise TypeError("mst_dictionaries must be a list of dictionaries")
-        json_str = json.dumps(list_dictionaries)
-        return json_str
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
