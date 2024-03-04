@@ -20,7 +20,8 @@ class Base:
         if list_dictionaries:
             if (isinstance(list_dictionaries, list) and
                     all(isinstance(var, dict) for var in list_dictionaries)):
-                return json.dumps(list_dictionaries)
+                json_str = json.dumps(list_dictionaries)
+                return json_str
             raise TypeError("list_dictionaries must be a list of dictionaries")
         return "[]"
 
@@ -45,17 +46,17 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """JSON string to dictionary"""
-        if json_string is None or json_string == "":
-            return "[]"
-        else:
-            python_objs = json.loads(json_string)
-            return python_objs
+        if json_string:
+            list_dictionaries = json.loads(json_string)
+            return list_dictionaries
+        return "[]"
 
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes"""
+        from models.rectangle import Rectangle
         from models.square import Square
-        dummy_obj = Square(5)
+        dummy_obj = Square(10, 7, 2, 8)
         dummy_obj.update(**dictionary)
         return dummy_obj
 
