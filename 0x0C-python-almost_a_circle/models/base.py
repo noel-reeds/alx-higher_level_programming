@@ -18,12 +18,8 @@ class Base:
     def to_json_string(list_dictionaries):
         """dictionary rep of an instance to JSON string"""
         if list_dictionaries:
-            serialized_items = []
-            for dict_item in list_dictionaries:
-                json_str = json.dumps(dict_item)
-                serialized_items.append(json_str)
-            """check for better implementation"""
-            return "[" + ",".join(serialized_items) + "]"
+            json_str = json.dumps(list_dictionaries)
+            return json_str
         else:
             return "[]"
 
