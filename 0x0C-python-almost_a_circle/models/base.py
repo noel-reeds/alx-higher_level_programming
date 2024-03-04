@@ -49,3 +49,15 @@ class Base:
         else:
             python_obj = json.loads(json_string)
             return python_obj
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attributes"""
+        from models.square import Square
+        dummy_obj = Square(5)
+        dummy_obj.update(**dictionary)
+        return dummy_obj
+
+    def load_from_file(cls):
+        """returns a list of instances"""
+        pass
