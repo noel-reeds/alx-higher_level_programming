@@ -17,12 +17,14 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """dictionary rep of an instance to JSON string"""
-        if list_dictionaries is None or list_dictionaries == []:
+        if list_dictionaries:
             return "[]"
-        if (type(list_dictionaries) != list or not
-                all(type(var) == dict for var in list_dictionaries)):
-            raise TypeError("list_dictionaries must be a list of dictionaries")
-        return json.dumps(list_dictionaries)
+        elem = list_dictionaries[0]
+        if isinstance(elem, dict):
+            return json.dumps(list_dictionaries)
+        else:
+            return json.dumps([obj.to_dictionary()
+                               for obj in list_dictionaries])
 
     @classmethod
     def save_to_file(cls, list_objs):
