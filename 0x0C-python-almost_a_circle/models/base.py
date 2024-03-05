@@ -17,25 +17,23 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """dictionary rep of an instance to JSON string"""
-        if list_dictionaries:
-            if (isinstance(list_dictionaries, list) and
-                    all(isinstance(var, dict) for var in list_dictionaries)):
-                json_str = json.dumps(list_dictionaries)
-                return json_str
+        if list_dictionaries is None or list_dictionaries == []:
+            return "[]"
+        if (type(list_dictionaries) != list or not
+                all(type(var) == dict for var in list_dictionaries)):
             raise TypeError("list_dictionaries must be a list of dictionaries")
-        return "[]"
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
         """writes JSON string to a file"""
         filename = f"{cls.__name__}.json"
-        if list_objs is [] or list_objs is None:
-            list_objs = []
+        if list_objs:
             json_str = cls.to_json_string(list_objs)
             with open(filename, mode="w", encoding="utf-8") as MyFile:
                 MyFile.write(json_str)
         else:
-            list_dicts = []
+            list_objs = []
             for obj in list_objs:
                 obj_dictionary = obj.to_dictionary()
                 list_dicts.append(obj_dictionary)
