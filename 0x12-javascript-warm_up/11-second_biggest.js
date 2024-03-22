@@ -5,26 +5,25 @@ if (argv.length === 2) {
 } else if (argv.length === 3) {
   console.log('0');
 } else {
-  let m = 2;
-  let num = argv[m];
-  while (m < argv.length) {
-    if (argv[m] < argv[m + 1]) {
-      num = argv[m + 1];
+  let index  = 2;
+  let largeIndex = index;
+  while (index < argv.length) {
+    if (parseInt(argv[largeIndex]) < parseInt(argv[index])) {
+      largeIndex = index;
     }
-    m++;
+    index++;
   }
-  console.log(m);
-  const temp = argv[2];
-  argv[2] = num;
-  argv[m] = temp;
-  let some_var = 3;
-  let second_num = argv[some_var];
-  console.log(m);
-  while (some_var < argv.length) {
-    if (second_num < argv[some_var + 1]) {
-      second_num = argv[some_var + 1];
+  console.log(parseInt(argv[largeIndex]));
+  const temp = parseInt(argv[2]);
+  argv[2] = parseInt(argv[largeIndex]);
+  argv[largeIndex] = temp;
+  index = 3;
+  let secondIndex = index;
+  while (index < argv.length) {
+    if (parseInt(argv[secondIndex]) < parseInt(argv[index])) {
+      secondIndex = index;
     }
-    some_var++;
+    index++;
   }
-  console.log(second_num);
-}
+  console.log(argv[secondIndex])
+};
