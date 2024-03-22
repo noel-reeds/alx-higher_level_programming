@@ -5,7 +5,7 @@ if (argv.length === 2) {
 } else if (argv.length === 3) {
   console.log('0');
 } else {
-  let index  = 2;
+  let index = 2;
   let largeIndex = index;
   while (index < argv.length) {
     if (parseInt(argv[largeIndex]) < parseInt(argv[index])) {
@@ -25,5 +25,5 @@ if (argv.length === 2) {
     }
     index++;
   }
-  console.log(argv[secondIndex])
-};
+  console.log(argv[secondIndex]);
+}
