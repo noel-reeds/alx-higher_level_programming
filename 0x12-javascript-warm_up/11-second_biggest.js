@@ -13,7 +13,6 @@ if (argv.length === 2) {
     }
     index++;
   }
-  console.log(parseInt(argv[largeIndex]));
   const temp = parseInt(argv[2]);
   argv[2] = parseInt(argv[largeIndex]);
   argv[largeIndex] = temp;
