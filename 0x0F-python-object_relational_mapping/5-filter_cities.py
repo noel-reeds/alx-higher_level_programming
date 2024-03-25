@@ -20,5 +20,7 @@ if __name__ == "__main__":
         "WHERE states.name = %s", (state,)
     )
     cities = cur.fetchall()
+    city_list = ""
     for city in cities:
-        print(city)
+        city_list += city[0] + ", "
+    print(city_list[:-2])
