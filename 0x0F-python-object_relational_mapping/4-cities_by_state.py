@@ -11,7 +11,12 @@ if __name__ == "__main__":
         port=3306
     )
     cur = db.cursor()
-    cur.execute("SELECT * FROM cities JOIN states ON cities.state_id=states.id")
+    cur.execute(
+        "SELECT cities.id, cities.name, states.name "
+        "FROM cities "
+        "LEFT JOIN states "
+        "ON cities.state_id=states.id"
+    )
     cities = cur.fetchall()
     for city in cities:
         print(city)
