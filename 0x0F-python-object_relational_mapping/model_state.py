@@ -7,6 +7,7 @@ Base = declarative_base()
 engine = create_engine('mysql+mysqldb://:altoid:1234@localhost/3306/mydb')
 
 if __name__ == "__main__":
+    """State class inherits from Base"""
     class State(Base):
         """
         State class inherits from Base
