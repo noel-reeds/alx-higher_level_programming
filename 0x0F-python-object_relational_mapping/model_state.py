@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-"""
-First state model
-"""
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, create_engine, Sequence
-
 if __name__ == "__main__":
     Base = declarative_base()
     engine = create_engine('mysql+mysqldb://:altoid:1234@localhost/3306/mydb')
-
+    """First state model"""
 
     class State(Base):
         """
