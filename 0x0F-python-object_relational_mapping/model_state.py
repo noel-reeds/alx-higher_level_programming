@@ -6,9 +6,8 @@ from sqlalchemy import Column, Integer, String, create_engine, Sequence
 Base = declarative_base()
 engine = create_engine('mysql+mysqldb://:altoid:1234@localhost/3306/mydb')
 
-
+"""State Class inherits"""
 class State(Base):
-    """State Class inherits"""
     __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True, Sequence('user_id_seq', not None))
