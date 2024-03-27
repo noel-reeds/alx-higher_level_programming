@@ -1,19 +1,28 @@
 #!/usr/bin/python3
-"""Prints the first State object from the database"""
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
-from model_state import Base, State
 import sys
+from sqlalchemy import create_engine
+from model_state import State, Base
+from sqlalchemy.orm import sessionmaker
 
-if __name__ == "__main__":
+if len(sys.argv) != 4:
+    print("Error: Please provide enough arguments.")
+    exit(1)
+
+username = sys.argv[1]
+password = sys.argv[2]
+database = sys.argv[3]
+
+try:
     engine = create_engine(
-            'mysql+mysqldb://:{}:{}@localhost/3306/{}'
-            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
+            'mysql+mysqldb://{}:{}@localhost/{}'
+            .format(username, password, database))
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).first()
-    if (states):
-        for state in states:
-            print("{}: {}".format(state.id, state.name))
+    state = session.query(State).first()
+    if (state):
+        print("{}: {}".format(state.id, state.name))
     else:
-        print('Nothing)
+        print('Nothing')
+except engine.Error as err:
+    print("Error:", err)
+engine.dispose()
