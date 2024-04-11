@@ -1,3 +1,3 @@
 #!/bin/bash
 # sends a GET request to return body of the response
-curl -o - "$1"
+curl -s -w "%{http_code}" "$1" | grep -q "200" && curl -s "$1"
