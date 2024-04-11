@@ -1,3 +1,3 @@
 #!/bin/bash
 # sets a cookie header variable
-curl -b "X-School-User-Id=98" "$1"
+curl -sb "X-School-User-Id=98" "$1"
