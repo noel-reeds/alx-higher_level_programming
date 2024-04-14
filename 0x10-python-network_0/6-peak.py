@@ -1,14 +1,20 @@
 #!/usr/bin/python3
-"""Finds the peak in a list of integers"""
+"""Finds Peak"""
 
 
 def find_peak(list_of_integers):
     """Returns peak value"""
-    if list_of_integers:
-        peak = list_of_integers[0]
-        for m in range(len(list_of_integers)):
-            if list_of_integers[m] > peak or \
-                    list_of_integers[m-1] < list_of_integers[m]:
-                peak = list_of_integers[m]
-        return peak
-    return None
+    if not list_of_integers:
+        return None
+
+    low = 0
+    high = len(list_of_integers) - 1
+
+    while low < high:
+        mid = (low + high) // 2
+        if list_of_integers[mid] < list_of_integers[mid + 1]:
+            low = mid + 1
+        else:
+            high = mid
+
+    return list_of_integers[low]
