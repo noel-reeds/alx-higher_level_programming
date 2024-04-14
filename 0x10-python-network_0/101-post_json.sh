@@ -1,3 +1,3 @@
 #!/bin/bash
 # POST a JSON file
-curl -sd "@$2" "$1"
+curl -s -H "Content-Type: application/json" -d "@$2" "$1"
