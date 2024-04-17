@@ -14,6 +14,6 @@ if __name__ == "__main__":
                 req_dict = eval(req.text)
                 print('[{}] {}'.format(req_dict['id'], req_dict['name']))
             else:
-                print('No result')        
+                print('No result')
         else:
             print('Not a valid JSON')
