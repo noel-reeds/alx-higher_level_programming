@@ -6,6 +6,7 @@ import requests
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         payload = {'q': ""}
+        print('No result')
     else:
         payload = {'q': sys.argv[1]}
         req = requests.post('http://0.0.0.0:5000/search_user', payload)
