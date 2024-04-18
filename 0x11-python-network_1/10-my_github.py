@@ -2,7 +2,6 @@
 """Basic Authentication"""
 import sys
 import requests
-import json
 
 if __name__ == "__main__":
     username = sys.argv[1]
@@ -10,7 +9,7 @@ if __name__ == "__main__":
     req = \
         requests.get('https://api.github.com/user', auth=(username, password))
     if req.status_code == 200:
-        user = json.loads(req.text)
-        print(user['id'])
+        user = req.json()
+        print(user.get('id'))
     else:
         print('None')
