@@ -11,4 +11,5 @@ if __name__ == "__main__":
     commits = requests.get(api)
     commits = commits.json()
     for m in range(10):
-        print("{}: {}".format(commits[m].get('sha'), commits[m].get('commit')['author']['name']))
+        if commits[m]:
+            print("{}: {}".format(commits[m].get('sha'), commits[m].get('commit')['author']['name']))
