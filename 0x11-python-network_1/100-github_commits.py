@@ -9,7 +9,7 @@ if __name__ == "__main__":
     api = f"https://api.github.com/repos/{owner_name}/\
 {repository_name}/commits"
     commits = requests.get(api)
-    commits = commits.json()
+    r = commits.json()
     for m in range(10):
-        if m < len(commits):
-            print("{}: {}".format(commits[m].get('sha'), commits[m].get('commit')['author']['name']))
+        if m < len(r):
+            print(f"{r[m].get('sha')}: {r[m].get('commit')['author']['name']}")
