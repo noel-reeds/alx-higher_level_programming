@@ -2,8 +2,8 @@
 const fs = require('fs').promises;
 async function readFile (filePath) {
   try {
-    const res = fs.readFile(filePath, 'utf-8');
-    console.log(res.toString());
+    const res = await fs.readFile(filePath, 'utf-8');
+    console.log(res);
   } catch (error) {
     console.log(error.message);
   }
