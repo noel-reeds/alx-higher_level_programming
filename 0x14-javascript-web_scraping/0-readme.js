@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const fs = require('fs').promises;
-async function (filePath) {
+async function readFile (filePath) {
   try {
     const res = fs.readFile(filePath, 'utf-8');
     console.log(res.toString());
