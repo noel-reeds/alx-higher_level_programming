@@ -5,7 +5,7 @@ async function readFile (filePath) {
     const res = await fs.readFile(filePath, 'utf-8');
     console.log(res);
   } catch (error) {
-    console.log(error.message);
+    console.error(error.message);
   }
 }
 const filePath = process.argv[2];
