@@ -8,7 +8,7 @@ request(url, function (error, response, body) {
   let filmCount = 0;
   films.forEach((film) => {
     film.characters.forEach((characterURL) => {
-      if (characterURL.includes("18")) { filmCount += 1; }
+      if (characterURL.includes('18')) { filmCount += 1; }
     });
   }); console.log(filmCount);
 });
