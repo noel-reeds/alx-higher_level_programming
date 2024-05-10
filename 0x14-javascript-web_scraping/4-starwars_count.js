@@ -8,8 +8,7 @@ request(url, function (error, response, body) {
   let filmCount = 0;
   films.forEach((film) => {
     film.characters.forEach((characterURL) => {
-      const desiredURL = 'https://swapi-api.alx-tools.com/api/people/18/';
-      if (characterURL === desiredURL) { filmCount += 1; }
+      if (characterURL.includes("18")) { filmCount += 1; }
     });
   }); console.log(filmCount);
 });
