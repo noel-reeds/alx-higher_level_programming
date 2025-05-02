@@ -1,5 +1,5 @@
 # JavaScript - jQuery  
-![please forgive me for using jQuery](https://imgur.com/a/MFOAyA2)  
+![please forgive me for using jQuery](https://i.imgur.com/thTOB8w.png)  
 
 
 ## Learning Objectives  
