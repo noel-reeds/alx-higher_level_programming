@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+$( document ).ready(function() {
   const uri3 = 'https://hellosalut.stefanbohacek.dev/?lang=fr';
   $.get(uri3, function (data, textStatus) {
     if (textStatus === 'success') {
