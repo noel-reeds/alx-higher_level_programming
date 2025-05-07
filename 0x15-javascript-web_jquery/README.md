@@ -1,5 +1,5 @@
 # JavaScript - jQuery  
-![please forgive me for using jQuery](https://i.imgur.com/thTOB8w.png)
+![please forgive me for using jQuery](https://i.imgur.com/thTOB8w.png)  
 ![did someone say jQuery?](https://i.imgur.com/9LzGTyd.png)  
 
 
